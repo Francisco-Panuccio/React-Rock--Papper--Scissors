@@ -1,7 +1,7 @@
 import Rock from "../iconos/rock.svg";
 import Papper from "../iconos/papper.svg";
 import Scissor from "../iconos/scissor.svg";
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 
 export const Context = createContext();
 
@@ -10,32 +10,30 @@ const ContextProvider = (props) => {
     const [player , setPlayer] = useState([]);
     const [machine, setMachine] = useState([]);
 
-    class Element{
-        constructor(id, img, win, lose, tie) {
-            this.id = id;
-            this.img = img;
-            this.win = win;
-            this.lose = lose;
-            this.tie = tie;
-        }
-    }
-
-    const rock = new Element(0, Rock, "scissor", "papper", "rock");
-    const papper = new Element(0, Papper, "rock", "scissor", "papper");
-    const scissor = new Element(0, Scissor, "papper", "rock", "scissor");
-
     const randomNumber = () => {
         const number = parseInt(Math.random()*3);
         if(number === 0) {
-            setMachine(rock.img);
+            setMachine(Rock);
         }
         else if (number === 1) {
-            setMachine(papper.img);
+            setMachine(Papper);
         }
         else if (number === 2) {
-            setMachine(scissor.img);
+            setMachine(Scissor);
         } else {
             return console.log("Error");
+        }
+    }
+
+    function results() {
+        if(player === Rock && machine === Scissor) {
+            alert("Ganaste");
+        }
+        else if(player === Rock && machine === Papper) {
+            alert("Perdiste");
+        }
+        else if(player === Rock && machine === Rock) {
+            alert("Empataste");
         }
     }
 
@@ -47,6 +45,9 @@ const ContextProvider = (props) => {
             setLoading(2);
         },1700)
     }
+
+    console.log(player);
+    console.log(machine);
 
     return (
         <>
