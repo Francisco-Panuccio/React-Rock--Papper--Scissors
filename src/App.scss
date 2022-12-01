@@ -1,0 +1,110 @@
+.headerGeneral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 0;
+        .titleGeneral {
+            color: white;
+            font-size: 5rem;
+        }
+}
+
+.board {
+    display: flex;
+    flex-flow: column wrap;
+        .players {
+            margin: 2rem 0;
+                .playerDiv {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                        span {
+                            color: white;
+                            font-size: 2rem;
+                        }
+                        .spanPlayer {
+                            margin-right: 0;
+                        }
+                        .spanMachine {
+                            margin-left: 6rem;
+                        }
+                }
+                .boxPlayerDiv {
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    margin-top: 2rem;
+                        div {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 20rem;
+                            height: 20rem;
+                            pointer-events: none;
+                            user-select: none;
+                            background-color: black;
+                            border: solid 1rem white;
+                            font-size: 2rem;
+                            color: white;
+                                .imgNormal {
+                                    height: 15rem;
+                                    width: 15rem;
+                                }
+                                .imgAnimation {
+                                    animation-name: roll;
+                                    animation-duration: 1.5s;
+                                    animation-timing-function: linear;
+                                    background-repeat: no-repeat;
+                                    background-size: contain;
+                                    height: 5rem;
+                                    width: 5rem;
+                                }
+                        }
+                        span {
+                            color: white;
+                            font-size: 5rem;
+                        }
+                }
+        }
+        .buttons {
+                .buttonsDiv {
+                    display: flex;
+                    justify-content: center;
+                        button {
+                            margin: 2rem 11rem;
+                            background-color: black;
+                            border: .2rem solid white;
+                            border-radius: 100%;
+                            width: 10rem;
+                            height: 10rem;
+                                img {
+                                    width: 5rem;
+                                    height: 5rem;
+                                }
+                        }
+                }
+        }
+        .score {
+            position: absolute;
+            margin: 7.5rem 0;
+            border-radius: 0 2rem 2rem 0;
+            width: 4rem;
+            height: 20rem;
+            background-color: white;
+        }
+}
+
+@keyframes roll {
+    25% {
+        background-image: url(./iconos/rock.svg);
+    }
+    50% {
+        background-image: url(./iconos/papper.svg);
+    }
+    75% {
+        background-image: url(./iconos/scissor.svg);
+    }
+    100% {
+        background-image: url(./iconos/exclaim.svg);
+    }
+}
