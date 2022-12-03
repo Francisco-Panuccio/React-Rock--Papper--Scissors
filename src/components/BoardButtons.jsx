@@ -5,13 +5,13 @@ import { Context } from "./Context";
 import { useContext } from "react";
 
 const BoardButtons = () => {
-    const { choice } = useContext(Context);
+    const { choice, loading, rock, papper, scissor } = useContext(Context);
 
     return (
         <>
-            <button onClick={() => choice(Rock)}><img src={Rock} /></button>
-            <button onClick={() => choice(Papper)}><img src={Papper} /></button>
-            <button onClick={() => choice(Scissor)}><img src={Scissor} /></button>
+            <button className="btn" onClick={() => choice(rock)} disabled={loading === 1}><img src={Rock} /></button>
+            <button className="btn" onClick={() => choice(papper)} disabled={loading === 1}><img src={Papper} /></button>
+            <button className="btn" onClick={() => choice(scissor)} disabled={loading === 1}><img src={Scissor} /></button>
         </>
     )
 }
