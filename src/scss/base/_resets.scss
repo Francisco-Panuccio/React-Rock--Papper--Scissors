@@ -15,10 +15,13 @@ button {
     outline: none;
 }
 
+html {
+    height: 100%;
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%)
+}
+
 body {
-    background-color: #040B13;
-    opacity: 0.9;
-    background-image:  radial-gradient(#ffffff 1.6px, transparent 1.6px), radial-gradient(#ffffff 1.6px, #040B13 1.6px);
-    background-size: 64px 64px;
-    background-position: 0 0,32px 32px;
+    background-color: #7f5a83;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
 }

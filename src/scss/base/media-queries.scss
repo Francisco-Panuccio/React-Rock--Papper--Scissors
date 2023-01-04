@@ -1,0 +1,372 @@
+@media only screen and (max-width: 1700px) {
+    .board {
+        .players {
+            .playerDiv {
+                justify-content: center;
+                    .spanPlayer {
+                        margin: 0 16.5rem 0 0;
+                    }
+                    .spanMachine {
+                        margin: 0 0 0 16.5rem;
+                    }
+            }
+            .boxPlayerDiv {
+                justify-content: center;
+                    div {
+                        margin: 0 5rem;
+                    }
+                    .popUp {
+                        width: 12rem;
+                        font-size: 5rem;
+                        text-align: center;
+                    }
+            }
+        }
+        .buttons {
+            .buttonsDiv {
+                button {
+                    margin: 2rem 5rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .board {
+        .scoreD2 {
+            .score2 {
+                .scoreDiv {
+                    width: 10rem;
+                        .scoreDiv1, .scoreDiv2 {
+                            width: 8rem;
+                        }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    .headerGeneral {
+        .titleGeneral {
+            font-size: 4rem;
+        }
+    }
+
+    .board {
+        .players {
+            .playerDiv {
+                    .spanPlayer {
+                        margin: 0 14.5rem 0 0;
+                    }
+                    .spanMachine {
+                        margin: 0 0 0 14.5rem;
+                    }
+            }
+            .boxPlayerDiv {
+                    div {
+                        margin: 0 3rem;
+                    }
+                    .popUp {
+                        width: 8rem;
+                        font-size: 3rem;
+                    }
+            }
+        }
+        .scoreD {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            border-radius: 4rem;
+            width: unset;
+            background-color: transparent;
+            height: 3rem;
+            margin: 2rem 0;
+                .score {
+                    padding: 0 0 0 .6rem;
+                    border-radius: 4rem;
+                    height: 3rem;
+                    width: 9rem;
+                        span {
+                            font-size: 1rem;
+                            letter-spacing: 1rem;
+                            writing-mode: unset;
+                        }
+                }
+        }
+        .scoreD2 {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            width: unset;
+            background-color: white;
+                .score2 {
+                    display: flex;
+                    justify-content: center;
+                        .scoreDiv {
+                            flex-direction: row;
+                            border-radius: 2rem;
+                            margin: 1rem 0 0 0;
+                            width: 20rem;
+                            height: 4rem;
+                                .scoreDiv1 {
+                                    margin: 0 1rem;
+                                    height: 3rem;
+                                        .scoreP {
+                                            padding: .1rem;
+                                        }
+                                }
+                                .scoreDiv2 {
+                                    margin: 0 1rem;
+                                    height: 3rem;
+                                        .scoreM {
+                                            padding: .1rem;
+                                        }
+                                }
+                                .scoreSum {
+                                    font-size: 1rem;
+                                    height: 2rem;
+                                }
+                        }
+                }
+        }
+        .buttons {
+            .buttonsDiv {
+                button {
+                    margin: 1rem 5rem;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .headerGeneral {
+        .titleGeneral {
+            font-size: 3rem;
+        }
+    }
+
+    .board {
+        .players {
+            .playerDiv {
+                .spanPlayer {
+                    margin: 0 12rem 0 0;
+                }
+                .spanMachine {
+                    margin: 0 0 0 12rem;
+                }
+            }
+            .boxPlayerDiv {
+                div {
+                    width: 15rem;
+                    height: 15rem;
+                        .imgNormal {
+                            height: 10rem;
+                            width: 10rem;
+                        }
+                        .imgAnimation {
+                            height: 2.5rem;
+                            width: 2.5rem;
+                        }
+                }
+                .popUp {
+                    width: 9rem;
+                    height: 4rem;
+                    font-size: 2rem;
+                }
+            }
+        }
+        .buttons {
+            .buttonsDiv {
+                button {
+                    margin: 1rem 5rem;
+                    width: 7rem;
+                    height: 7rem;
+                        img {
+                            width: 3rem;
+                            height: 3rem;
+                        }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .headerGeneral {
+        .titleGeneral {
+            font-size: 2.5rem;
+        }
+    }
+
+    .board {
+        .players {
+            .playerDiv {
+                .spanPlayer {
+                    margin: 0 9rem 0 0;
+                }
+                .spanMachine {
+                    margin: 0 0 0 6rem;
+                }
+            }
+            .boxPlayerDiv {
+                div {
+                    width: 12rem;
+                    height: 12rem;
+                    margin: 0 1rem;
+                        .imgNormal {
+                            height: 9rem;
+                            width: 9rem;
+                        }
+                }
+                .popUp {
+                    width: 4.5rem;
+                    height: 5rem;
+                    font-size: 1.5rem;
+                }
+                span {
+                    font-size: 4rem;
+                }
+            }
+        }
+        .buttons {
+            .buttonsDiv {
+                button {
+                    margin: 1rem 3rem;
+                    width: 7rem;
+                    height: 7rem;
+                }
+            }
+        }
+        .scoreD2 {
+            .score2 {
+                .scoreDiv {
+                    .scoreDiv1 {
+                        height: 3.2rem;
+                            .scoreP {
+                                font-size: 1rem;
+                            }
+                    }
+                    .scoreDiv2 {
+                        height: 3.2rem;
+                            .scoreM {
+                                font-size: 1rem;
+                            }
+                    }
+                    .scoreSum {
+                        font-size: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 660px) {
+    .headerGeneral {
+        .titleGeneral {
+            font-size: 1.8rem;
+        }
+    }
+
+    .board {
+        .players {
+            margin-top: 0;
+            width: fit-content;
+            .playerDiv {
+                display: none;
+            }
+            .boxPlayerDiv {
+                margin: 0 0 0 2rem;
+                flex-direction: column;
+                width: fit-content;
+                align-items: center;
+                .especialS {
+                    display: block;
+                    margin: 1rem;
+                    font-size: 2rem;
+                    text-decoration: underline;
+                    font-family: 'ALIENS GT', sans-serif; 
+                    user-select: none;    
+                }
+                span {
+                    margin: 1.5rem 0;
+                }
+            }
+        }
+        .buttons {
+            width: fit-content;
+            position: absolute;
+            right: 0;
+            top: 29%;
+            .buttonsDiv {
+                flex-direction: column;
+                width: fit-content;
+            }
+        }
+        .scoreD {
+            margin-top: 0;
+        }
+        .scoreD2 {
+            .score2 {
+                .scoreDiv {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .headerGeneral {
+        .titleGeneral {
+            font-size: 1.5rem;
+        }
+    }
+
+    .board {
+        .players {
+            .boxPlayerDiv {
+                margin: 0;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .headerGeneral {
+        .titleGeneral {
+            font-size: 1.3rem;
+        }
+    }
+
+    .board {
+        .players {
+            .boxPlayerDiv {
+                div {
+                    width: 10rem;
+                    height: 10rem;
+                        .imgNormal {
+                            height: 7rem;
+                            width: 7rem;
+                        }
+                }
+                .especialS {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        .buttons {
+            top: 20.2%;
+            .buttonsDiv {
+                button {
+                    margin: 1rem 1rem 1rem 0;
+                    width: 7rem;
+                    height: 7rem;
+                }
+            }
+        }
+    }
+}

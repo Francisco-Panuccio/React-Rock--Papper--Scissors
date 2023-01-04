@@ -8,11 +8,13 @@ const Board = () => {
             <main className="board">
                 <section className="players">
                     <div className="playerDiv">
-                        <span className="spanPlayer">Player</span>
-                        <span className="spanMachine">Machine</span>
+                        <span className="spanPlayer">player</span>
+                        <span className="spanMachine">machine</span>
                     </div>
                     <div className="boxPlayerDiv">
+                        <span className="especialS">player</span>
                         <BoardTurn/>
+                        <span className="especialS">machine</span>
                     </div>
                 </section>
                 <section className="buttons">
@@ -20,9 +22,7 @@ const Board = () => {
                         <BoardButtons/>
                     </div>
                 </section>
-                <button className="score">
-                    <Score/>
-                </button>
+                <Score/>
             </main>
         </>
     )

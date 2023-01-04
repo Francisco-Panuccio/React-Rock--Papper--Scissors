@@ -1,7 +1,7 @@
 const LoadingP = () => {
     return(
         <>
-            <div>Your Turn</div>
+            <div>your turn</div>
         </>
     )
 }

@@ -1,7 +1,7 @@
 const LoadingM = () => {
     return(
         <>
-            <div>Waiting...</div>
+            <div>waiting...</div>
         </>
     )
 }

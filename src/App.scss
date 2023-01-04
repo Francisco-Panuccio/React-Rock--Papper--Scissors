@@ -4,8 +4,14 @@
     align-items: center;
     margin: 2rem 0;
         .titleGeneral {
-            color: white;
             font-size: 5rem;
+            font-family: 'Mobitale Versalete', sans-serif;                                
+            color: #8b8c7a;
+            background-image: -webkit-linear-gradient(45deg, #8b8c7a 27%,#FFFAFA 28%,#434343 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            user-select: none;
         }
 }
 
@@ -24,9 +30,15 @@
                         }
                         .spanPlayer {
                             margin-right: 0;
+                            text-decoration: underline;
+                            font-family: 'ALIENS GT', sans-serif; 
+                            user-select: none;                             
                         }
                         .spanMachine {
                             margin-left: 6rem;
+                            text-decoration: underline;
+                            font-family: 'ALIENS GT', sans-serif;
+                            user-select: none;
                         }
                 }
                 .boxPlayerDiv {
@@ -34,6 +46,9 @@
                     justify-content: space-evenly;
                     align-items: center;
                     margin-top: 2rem;
+                        .especialS {
+                            display: none;
+                        }
                         div {
                             display: flex;
                             justify-content: center;
@@ -43,8 +58,10 @@
                             pointer-events: none;
                             user-select: none;
                             background-color: black;
+                            border-radius: 4rem;
                             border: solid 1rem white;
                             font-size: 2rem;
+                            font-family: 'miniskip', sans-serif;
                             color: white;
                                 .imgNormal {
                                     height: 15rem;
@@ -60,9 +77,43 @@
                                     width: 5rem;
                                 }
                         }
+                        .divGreen {
+                            border: solid 1rem #32cd32;
+                        }
+                        .divRed {
+                            border: solid 1rem #cc0000;
+                        }
+                        .divYellow {
+                            border: solid 1rem #ffff40;
+                        }
                         span {
                             color: white;
-                            font-size: 5rem;
+                            font-size: 6rem;
+                            user-select: none;
+                            font-family: 'miniskip', sans-serif;
+                        }
+                        .popUp {
+                            width: 30rem;
+                            border-radius: 2rem;
+                            color: white;
+                            font-size: 6rem;
+                            font-family: 'miniskip', sans-serif;
+                            margin: auto;
+                            height: fit-content;
+                            position: absolute;
+                            border: .2rem solid white;
+                        }
+                        .popUpR {
+                            color: #cc0000;
+                        }
+                        .popUpG {
+                            color: #32cd32;
+                        }
+                        .popUpY {
+                            color: #ffff40;
+                        }
+                        .popUpNull {
+                            display: none;
                         }
                 }
         }
@@ -84,13 +135,85 @@
                         }
                 }
         }
-        .score {
+        .scoreD {
             position: absolute;
             margin: 7.5rem 0;
             border-radius: 0 2rem 2rem 0;
             width: 4rem;
             height: 20rem;
             background-color: white;
+                .score {
+                    position: absolute;
+                    border-radius: 0 2rem 2rem 0;
+                    width: 4rem;
+                    padding-top: 1rem;
+                    height: 20rem;
+                    background-color: white;
+                        span {
+                            font-family: 'ALIENS GT', sans-serif; 
+                            writing-mode: vertical-rl;
+                            text-orientation: upright;
+                            font-size: 2rem;
+                            letter-spacing: 1.2rem;
+                        }
+                }
+        }
+        .scoreD2 {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-radius: 2rem;
+            border: none;
+                .score2 {
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    border-radius: 2rem;
+                    border: none;
+                        .scoreDiv {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            border: .1rem solid white;
+                            background-color: black;
+                            border-radius: 0 2rem 2rem 0;
+                            margin: 7.2rem 0;
+                            width: 13rem;
+                            height: 20rem;
+                            color: white;
+                                .scoreDiv1 {
+                                    border: .1rem solid white;
+                                    border-radius: 1rem;
+                                    margin: 1rem 0;
+                                    width: 10rem;
+                                    font-family: 'ALIENS GT', sans-serif; 
+                                        .scoreP {
+                                            padding: .5rem 0.8rem;
+                                            height: fit-content;
+                                            border-bottom: .1rem solid white;
+                                        }
+                                }
+                                .scoreDiv2 {
+                                    border: .1rem solid white;
+                                    border-radius: 1rem;
+                                    margin: 1rem 0;
+                                    width: 10rem;
+                                    font-family: 'ALIENS GT', sans-serif; 
+                                        .scoreM {
+                                            padding: 0.5rem .5rem;
+                                            border-bottom: .1rem solid white;
+                                        }
+                                }
+                                .scoreSum {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    font-size: 2rem;
+                                    font-family: sans-serif;
+                                    height: 5.8rem;
+                                }
+                        }
+                }
         }
 }
 

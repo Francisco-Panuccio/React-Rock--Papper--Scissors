@@ -9,6 +9,12 @@ const ContextProvider = (props) => {
     const [loading, setLoading] = useState(0);
     const [player , setPlayer] = useState();
     const [machine, setMachine] = useState();
+    const [popUp, setPopUp] = useState();
+    const [score, setScore] = useState(0);
+    const [scoreValue, setScoreValue] = useState(
+        {gamerPlayer: 0,
+        gamerMachine: 0}
+    );
 
     class Elements {
         constructor(value, img) {
@@ -48,33 +54,27 @@ const ContextProvider = (props) => {
         return -1
     }
 
-    const playerWins = () => {
-        alert("You Win")
-    }
-
-    const tie = () => {
-        alert("You Tie")
-    }
-
-    const machineWins = () => {
-        alert("You Lose")
-    }
-
     const results = () => {
         const result = whoWon(player.value, machine.value)
         switch(result) {
-            case 1: playerWins()
+            case 1: setPopUp(1);
+                    setLoading(3);
+                    setScoreValue({...scoreValue, gamerPlayer: scoreValue.gamerPlayer + 1});
             break;
             
-            case 0: tie()
+            case 0: setPopUp(0);
+                    setLoading(4);
             break;
 
-            case -1: machineWins()
+            case -1: setPopUp(-1);
+                    setLoading(5);
+                    setScoreValue({...scoreValue, gamerMachine: scoreValue.gamerMachine + 1});
             break;
         }
     }
 
     function choice(hand) {
+        setPopUp();
         setLoading(1);
         setPlayer(hand);
         setTimeout(() => {
@@ -82,18 +82,24 @@ const ContextProvider = (props) => {
             setLoading(2);
         },1700)
     }
+    
+    function scoreShow() {
+        setScore(1);
+    }
+
+    function scoreBreak() {
+        setScore(0);
+    }
 
     useEffect(() => {
         if(loading === 2 && player) {
-            setTimeout(() => {
-                results();
-            },300)
+            results();
         }
     }, [loading])
 
     return (
         <>
-            <Context.Provider value={{ choice, loading, player, machine, rock, papper, scissor }}>
+            <Context.Provider value={{ choice, scoreShow, scoreBreak, score, scoreValue, popUp, loading, player, machine, rock, papper, scissor }}>
                 {props.children}
             </Context.Provider>
         </>
